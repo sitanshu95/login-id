@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()"><b>Log In</b></button>
+            <button type="button" class="toggle-btn" onclick="register()"><b>Sign Up</b></button>
+        </div>
+        <div class="social-icons">
+           <a href="https://accounts.google.com/"><img src="google.png" height="40px" width="40px"></a> 
+           <a href="https://www.facebook.com/"> <img src="fb1.png" height="40px" width="40px"></a>
+           <a href="https://twitter.com/login"> <img src="twitter.png" height="40px" width="40px"></a>
+           <a href="https://www.linkedin.com/login"><img src="in.png" height="40px" width="40px"></a> 
+        </div>
+        <form id="login" class="input-group">
+            <input type="email" pattern=".+@gmail\.com" title="Enter Valid Email Address"class="input-field" placeholder="Enter Your Email Id" required><br><br>
+            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="input-field" placeholder="Enter Your Password"minlength="8" required><br><br>
+            <a href="https://accounts.google.com">Forgot Password?</a>
+            <button type="submit" class="submit-btn" ><b>Log In</b></button>
+            <div class="signup-link">Don't have an account?<a href="index2.html"> Signup Now!</a></div>
+        </form>
+        <form id="register" class="input-group">
+            <input type="email" pattern=".+@gmail\.com"title="Enter Valid Email Address" class="input-field" placeholder="Enter Your Email Id" required><br><br>
+            <input type="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="input-field" placeholder="Create Your Password"minlength="8" required><br><br>
+            <input type="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="input-field" placeholder="Confirm Your Password"minlength="8" required><br><br>
+            <input type="checkbox" required> I agree to the <a href="">Terms & Conditions.</a> 
+             <button type="submit" class="submit-btn"><b>Sign Up</b> </button>
+            </form>
+        </div>
+        
+        
+        
+      </div>
+
+  
+  <script>
+      var x=document.getElementById("login");
+      var y=document.getElementById("register");
+      var z=document.getElementById("btn");
+
+      function register(){
+          x.style.left ="-400px";
+          y.style.left ="50px";
+          z.style.left ="110px";
+        }
+        function login(){
+          x.style.left ="50px";
+          y.style.left ="450px";
+          z.style.left ="0";
+        }
+  </script>
+ 
+</body>
+</html>
